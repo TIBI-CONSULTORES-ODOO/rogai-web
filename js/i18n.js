@@ -161,6 +161,7 @@
     metaDesc.content = META[lang].desc;
     ogT.content = META[lang].title;
     ogD.content = OG_D[lang];
+    document.querySelector('.lang').dataset.active = lang;
     document.querySelectorAll('.lang button').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.lang === lang)));
     if (persist) { try { localStorage.setItem('rogai-lang', lang); } catch (e) { /* storage unavailable */ } }
     document.dispatchEvent(new CustomEvent('langchange', { detail: lang }));

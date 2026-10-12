@@ -100,10 +100,16 @@ p { text-wrap: pretty; max-width: 62ch; }
 .nav a:not(.btn)::after { content: ""; position: absolute; inset: auto 0 0 0; height: 2px; background: var(--burgundy); transform: scaleX(0); transform-origin: left; transition: transform 0.4s var(--ease); }
 .nav a:not(.btn):hover::after { transform: scaleX(1); }
 .nav-cta { min-height: 44px; padding: 0.6rem 1.2rem; }
-.lang { display: inline-flex; padding: 3px; gap: 2px; border: 1.5px solid rgba(43, 22, 18, 0.25); border-radius: 999px; flex: none; }
-.lang button { min-width: 44px; min-height: 36px; padding: 0 10px; font: 700 0.82rem/1 var(--font); letter-spacing: 0.04em; color: var(--ink); background: transparent; border: 0; border-radius: 999px; cursor: pointer; transition: background-color 0.25s, color 0.25s; }
-.lang button:hover { background: rgba(143, 38, 45, 0.1); }
-.lang button[aria-pressed="true"] { background: var(--burgundy); color: var(--cream-light); }
+/* Language switch: segmented control with a sliding thumb */
+.lang { --w: 46px; position: relative; display: inline-flex; align-items: center; padding: 4px 4px 4px 12px; gap: 0; flex: none; border-radius: 999px; background: var(--cream-light); box-shadow: inset 0 0 0 1.5px rgba(143, 38, 45, 0.28), 0 6px 14px -10px rgba(74, 16, 21, 0.5); isolation: isolate; }
+.lang-ico { width: 18px; height: 18px; margin-right: 8px; flex: none; fill: none; stroke: var(--burgundy); stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.lang::before { content: ""; position: absolute; z-index: -1; top: 4px; bottom: 4px; right: calc(4px + var(--w)); width: var(--w); border-radius: 999px; background: var(--burgundy); box-shadow: 0 4px 10px -3px rgba(74, 16, 21, 0.6); transition: transform 0.45s var(--ease); }
+.lang[data-active="en"]::before { transform: translateX(var(--w)); }
+.lang button { position: relative; width: var(--w); min-height: 38px; padding: 0; font: 800 0.8rem/1 var(--font); letter-spacing: 0.06em; color: var(--burgundy); background: transparent; border: 0; border-radius: 999px; cursor: pointer; transition: color 0.3s, transform 0.25s var(--ease); }
+.lang button:hover { color: var(--burgundy-deep); }
+.lang button[aria-pressed="true"] { color: var(--cream-light); }
+.lang button:active { transform: scale(0.92); }
+.lang button:focus-visible { outline: 3px solid var(--amber); outline-offset: 1px; }
 .menu-btn { display: none; width: 48px; height: 48px; background: none; border: 0; padding: 0; cursor: pointer; position: relative; border-radius: 10px; }
 .menu-btn span { position: absolute; left: 12px; right: 12px; height: 2.5px; background: var(--burgundy); border-radius: 2px; transition: transform 0.4s var(--ease), top 0.4s var(--ease); }
 .menu-btn span:first-child { top: 19px; }
