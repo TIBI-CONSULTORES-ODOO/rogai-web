@@ -7,9 +7,19 @@
   // Mobile menu
   const btn = document.querySelector('.menu-btn');
   const nav = document.getElementById('nav');
+  const form = document.getElementById('form');
+  const note = document.getElementById('form-note');
+  const T = (k) => window.rogaiI18n.t(k);
+  const menuLabel = () => btn.setAttribute('aria-label', btn.getAttribute('aria-expanded') === 'true' ? T('menuClose') : T('menuOpen'));
+  menuLabel();
+  document.addEventListener('langchange', () => {
+    menuLabel();
+    note.textContent = '';
+    form.querySelectorAll('.field').forEach((f) => { f.classList.remove('invalid'); const e = f.querySelector('.err'); if (e) e.textContent = ''; });
+  });
   const setMenu = (open) => {
     btn.setAttribute('aria-expanded', String(open));
-    btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    menuLabel();
     nav.classList.toggle('open', open);
     document.body.style.overflow = open ? 'hidden' : '';
   };
@@ -52,12 +62,10 @@
   } else items.forEach((el) => el.classList.add('in'));
 
   // Contact form: validates, then opens the visitor's email app addressed to sales@
-  const form = document.getElementById('form');
-  const note = document.getElementById('form-note');
   const rules = {
-    name: (v) => (v.trim() ? '' : 'Please enter your name.'),
-    email: (v) => (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()) ? '' : 'Please enter a valid email address.'),
-    message: (v) => (v.trim() ? '' : 'Please tell us how we can help.'),
+    name: (v) => (v.trim() ? '' : T('errName')),
+    email: (v) => (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()) ? '' : T('errEmail')),
+    message: (v) => (v.trim() ? '' : T('errMsg')),
   };
   form.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -73,7 +81,7 @@
     if (!ok) { note.textContent = ''; return; }
     const d = Object.fromEntries(new FormData(form));
     const body = `${d.message}\n\n— ${d.name}${d.company ? `, ${d.company}` : ''}\n${d.email}`;
-    window.location.href = `mailto:sales@rogaisnacks.com?subject=${encodeURIComponent('Quote request from ' + d.name)}&body=${encodeURIComponent(body)}`;
-    note.textContent = 'Thanks! Your email app should open with your message ready to send.';
+    window.location.href = `mailto:sales@rogaisnacks.com?subject=${encodeURIComponent(T('subject')(d.name))}&body=${encodeURIComponent(body)}`;
+    note.textContent = T('sent');
   });
 })();

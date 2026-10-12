@@ -100,6 +100,10 @@ p { text-wrap: pretty; max-width: 62ch; }
 .nav a:not(.btn)::after { content: ""; position: absolute; inset: auto 0 0 0; height: 2px; background: var(--burgundy); transform: scaleX(0); transform-origin: left; transition: transform 0.4s var(--ease); }
 .nav a:not(.btn):hover::after { transform: scaleX(1); }
 .nav-cta { min-height: 44px; padding: 0.6rem 1.2rem; }
+.lang { display: inline-flex; padding: 3px; gap: 2px; border: 1.5px solid rgba(43, 22, 18, 0.25); border-radius: 999px; flex: none; }
+.lang button { min-width: 44px; min-height: 36px; padding: 0 10px; font: 700 0.82rem/1 var(--font); letter-spacing: 0.04em; color: var(--ink); background: transparent; border: 0; border-radius: 999px; cursor: pointer; transition: background-color 0.25s, color 0.25s; }
+.lang button:hover { background: rgba(143, 38, 45, 0.1); }
+.lang button[aria-pressed="true"] { background: var(--burgundy); color: var(--cream-light); }
 .menu-btn { display: none; width: 48px; height: 48px; background: none; border: 0; padding: 0; cursor: pointer; position: relative; border-radius: 10px; }
 .menu-btn span { position: absolute; left: 12px; right: 12px; height: 2.5px; background: var(--burgundy); border-radius: 2px; transition: transform 0.4s var(--ease), top 0.4s var(--ease); }
 .menu-btn span:first-child { top: 19px; }
@@ -204,7 +208,8 @@ p { text-wrap: pretty; max-width: 62ch; }
 .panel:not([hidden]) .panel-info > :nth-child(4) { animation-delay: 0.18s; }
 @keyframes bagIn { from { opacity: 0; transform: translateY(40px) rotate(-12deg) scale(0.94); } }
 .panel-info h3 { font-size: clamp(2rem, 4.2vw, 3.6rem); font-weight: 900; }
-.panel-info h3 span { display: block; font-weight: 600; font-size: 0.5em; letter-spacing: -0.015em; opacity: 0.92; margin-top: 0.4em; }
+.panel-info h3 .t, .panel-info h3 .s { display: block; }
+.panel-info h3 .s { font-weight: 600; font-size: 0.5em; letter-spacing: -0.015em; opacity: 0.92; margin-top: 0.4em; }
 .panel-info > p { margin-top: 1.4rem; font-size: 1.12rem; color: var(--fg-soft); max-width: 46ch; }
 .spec { display: flex; flex-wrap: wrap; gap: 1rem 2.5rem; margin: 1.75rem 0 2rem; padding-top: 1.25rem; border-top: 1px solid color-mix(in srgb, var(--fg) 30%, transparent); }
 .spec dt { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--fg-soft); }
@@ -285,6 +290,8 @@ p { text-wrap: pretty; max-width: 62ch; }
   :root { --header-h: 68px; }
   .brand img { height: 46px; }
   .menu-btn { display: block; }
+  .bar { gap: 0.6rem; }
+  .brand { margin-right: auto; }
   .nav {
     position: fixed; inset: var(--header-h) 0 0 0; background: var(--cream);
     flex-direction: column; align-items: stretch; justify-content: flex-start; gap: 0; padding: 1rem var(--gutter) 2rem;

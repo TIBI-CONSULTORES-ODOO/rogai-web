@@ -15,20 +15,24 @@
 <script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
-<a class="skip" href="#main">Skip to content</a>
+<a class="skip" href="#main" data-i18n="skip">Skip to content</a>
 
 <header class="site-header" id="top">
   <div class="wrap bar">
-    <a class="brand" href="#top" aria-label="Rogai, a tropical and natural snack. Home">
-      <img src="img/logo.png" alt="Rogai, a tropical and natural snack" width="598" height="215">
+    <a class="brand" href="#top" data-i18n-a="aria-label:brand.aria" aria-label="Rogai, a tropical and natural snack. Home">
+      <img src="img/logo.png" data-i18n-a="alt:brand.alt" alt="Rogai, a tropical and natural snack" width="598" height="215">
     </a>
-    <nav class="nav" id="nav" aria-label="Main">
-      <a href="#about">About Us</a>
-      <a href="#chips">Our Chips</a>
-      <a href="#commitment">Our Commitment</a>
-      <a href="#contact">Contact Us</a>
-      <a class="btn btn-solid nav-cta" href="#quote">Request a quote</a>
+    <nav class="nav" id="nav" data-i18n-a="aria-label:nav.aria" aria-label="Main">
+      <a href="#about" data-i18n="nav.about">About Us</a>
+      <a href="#chips" data-i18n="nav.chips">Our Chips</a>
+      <a href="#commitment" data-i18n="nav.commit">Our Commitment</a>
+      <a href="#contact" data-i18n="nav.contact">Contact Us</a>
+      <a class="btn btn-solid nav-cta" href="#quote" data-i18n="cta.quote">Request a quote</a>
     </nav>
+    <div class="lang" role="group" aria-label="Language / Idioma">
+      <button type="button" data-lang="es" lang="es" aria-pressed="false" title="Español">ES</button>
+      <button type="button" data-lang="en" lang="en" aria-pressed="true" title="English">EN</button>
+    </div>
     <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav" aria-label="Open menu">
       <span></span><span></span>
     </button>
@@ -43,31 +47,31 @@
     <div class="hero-copy">
       <p class="hero-badge">
         <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5 10 17.5 19 7.5"/></svg>
-        USDA Organic certified
+        <span data-i18n="hero.badge">USDA Organic certified</span>
       </p>
-      <h1>Natural plantain chips from Ecuador’s Pacific Coast.</h1>
-      <p class="lead">Our family has tended green plantain fields in Ecuador for more than 50 years. Today they become natural, tasty chips, made from organic plantains to high industry standards.</p>
+      <h1 data-i18n="hero.h1">Natural plantain chips from Ecuador’s Pacific Coast.</h1>
+      <p class="lead" data-i18n="hero.lead">Our family has tended green plantain fields in Ecuador for more than 50 years. Today they become natural, tasty chips, made from organic plantains to high industry standards.</p>
       <div class="hero-actions">
-        <a class="btn btn-amber" href="#chips">See our chips</a>
-        <a class="btn btn-ghost" href="#quote">Request a quote</a>
+        <a class="btn btn-amber" href="#chips" data-i18n="hero.see">See our chips</a>
+        <a class="btn btn-ghost" href="#quote" data-i18n="cta.quote">Request a quote</a>
       </div>
-      <ul class="hero-marks" aria-label="Certifications and product claims">
-        <li>USDA Organic</li>
-        <li>Kosher</li>
-        <li>SGS HACCP</li>
-        <li>No added sugar</li>
-        <li>Cholesterol free</li>
-        <li>No trans fats</li>
+      <ul class="hero-marks" data-i18n-a="aria-label:hero.marks.aria" aria-label="Certifications and product claims">
+        <li data-i18n="mark.usda">USDA Organic</li>
+        <li data-i18n="mark.kosher">Kosher</li>
+        <li data-i18n="mark.sgs">SGS HACCP</li>
+        <li data-i18n="mark.sugar">No added sugar</li>
+        <li data-i18n="mark.chol">Cholesterol free</li>
+        <li data-i18n="mark.trans">No trans fats</li>
       </ul>
     </div>
 
     <div class="hero-visual">
       <div class="hero-photo">
-        <img src="img/chip-line-wide-900.webp" srcset="img/chip-line-wide-900.webp 900w, img/chip-line-wide-1500.webp 1500w" sizes="(min-width: 960px) 40vw, 90vw" width="900" height="1200" alt="Freshly made plantain chips on the production line at the Rogai plant, with two team members working at the end of the line" fetchpriority="high">
+        <img src="img/chip-line-wide-900.webp" srcset="img/chip-line-wide-900.webp 900w, img/chip-line-wide-1500.webp 1500w" sizes="(min-width: 960px) 40vw, 90vw" width="900" height="1200" data-i18n-a="alt:hero.photo.alt" alt="Freshly made plantain chips on the production line at the Rogai plant, with two team members working at the end of the line" fetchpriority="high">
       </div>
-      <img class="bag bag-1" src="img/cut-sweet.webp" width="483" height="678" alt="Rogai Plantain Chips, Naturally Sweet" >
-      <img class="bag bag-2" src="img/cut-salt.webp" width="484" height="679" alt="Rogai Plantain Chips, Pacific Sea Salt">
-      <img class="bag bag-3" src="img/cut-chili.webp" width="482" height="676" alt="Rogai Plantain Chips, Chili">
+      <img class="bag bag-1" src="img/cut-sweet.webp" width="483" height="678" data-i18n-a="alt:bag.sweet.alt" alt="Rogai Plantain Chips, Naturally Sweet">
+      <img class="bag bag-2" src="img/cut-salt.webp" width="484" height="679" data-i18n-a="alt:bag.salt.alt" alt="Rogai Plantain Chips, Pacific Sea Salt">
+      <img class="bag bag-3" src="img/cut-chili.webp" width="482" height="676" data-i18n-a="alt:bag.chili.alt" alt="Rogai Plantain Chips, Chili">
     </div>
   </div>
 </section>
@@ -77,34 +81,34 @@
   <div class="wrap certs-grid">
     <div class="certs-lead">
       <svg class="leaf" viewBox="0 0 48 48" aria-hidden="true"><path d="M40 8C20 8 9 18 9 31c0 3 .8 5.600 2.200 7.800C13 40 15 41 17 41c13 0 23-11 23-33Z"/><path d="M11 38c5-9 12-15 20-19"/></svg>
-      <h2 id="certs-h">Certified USDA Organic.</h2>
-      <p>Rogai holds the <strong>USDA Organic certification</strong>. Our chips are made from organically grown plantains, from our own fields to your shelf.</p>
-      <a class="text-link" href="https://certifiedclientsportal.sgs.com/CCP2/Public/CertificateView?Id=33618ee0-5a9c-457a-a813-adcf014d6ae3&amp;master=popup" target="_blank" rel="noopener">View our SGS HACCP certificate <span class="sr">(opens in a new tab)</span></a>
+      <h2 id="certs-h" data-i18n="certs.h">Certified USDA Organic.</h2>
+      <p data-i18n-h="certs.p">Rogai holds the <strong>USDA Organic certification</strong>. Our chips are made from organically grown plantains, from our own fields to your shelf.</p>
+      <a class="text-link" href="https://certifiedclientsportal.sgs.com/CCP2/Public/CertificateView?Id=33618ee0-5a9c-457a-a813-adcf014d6ae3&amp;master=popup" target="_blank" rel="noopener"><span data-i18n="certs.sgs">View our SGS HACCP certificate</span> <span class="sr" data-i18n="newtab">(opens in a new tab)</span></a>
     </div>
     <ul class="cert-list">
       <li>
         <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 4.500 6v5.500c0 4.500 3 8 7.500 9.500 4.500-1.500 7.500-5 7.500-9.500V6L12 3Z"/><path d="m8.800 12 2.400 2.400 4-4.600"/></svg>
-        <div><h3>USDA Organic</h3><p>Certified organic.</p></div>
+        <div><h3 data-i18n="mark.usda">USDA Organic</h3><p data-i18n="cert.usda.p">Certified organic.</p></div>
       </li>
       <li>
         <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 4.500 6v5.500c0 4.500 3 8 7.500 9.500 4.500-1.500 7.500-5 7.500-9.500V6L12 3Z"/><path d="m8.800 12 2.400 2.400 4-4.600"/></svg>
-        <div><h3>SGS HACCP</h3><p>Food safety, independently certified.</p></div>
+        <div><h3 data-i18n="mark.sgs">SGS HACCP</h3><p data-i18n="cert.sgs.p">Food safety, independently certified.</p></div>
       </li>
       <li>
         <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8.500 12.200 2.500 2.500 4.600-5"/></svg>
-        <div><h3>Kosher</h3><p>Kosher certified.</p></div>
+        <div><h3 data-i18n="mark.kosher">Kosher</h3><p data-i18n="cert.kosher.p">Kosher certified.</p></div>
       </li>
       <li>
         <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8.500 12.200 2.500 2.500 4.600-5"/></svg>
-        <div><h3>No added sugar</h3><p>Nothing added, only plantain.</p></div>
+        <div><h3 data-i18n="mark.sugar">No added sugar</h3><p data-i18n="cert.sugar.p">Nothing added, only plantain.</p></div>
       </li>
       <li>
         <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8.500 12.200 2.500 2.500 4.600-5"/></svg>
-        <div><h3>Cholesterol free</h3><p>Cholesterol-free snack.</p></div>
+        <div><h3 data-i18n="mark.chol">Cholesterol free</h3><p data-i18n="cert.chol.p">Cholesterol-free snack.</p></div>
       </li>
       <li>
         <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8.500 12.200 2.500 2.500 4.600-5"/></svg>
-        <div><h3>No trans fats</h3><p>Zero trans fats.</p></div>
+        <div><h3 data-i18n="mark.trans">No trans fats</h3><p data-i18n="cert.trans.p">Zero trans fats.</p></div>
       </li>
     </ul>
   </div>
@@ -114,17 +118,17 @@
 <section class="about" id="about" aria-labelledby="about-h">
   <div class="wrap about-grid">
     <div class="about-copy reveal">
-      <h2 id="about-h">Welcome to Bananas Rogai. Where quality is our mission.</h2>
-      <p>Bananas Rogai was founded through the entrepreneurship and vision of <strong>Rodolfo Gaibor</strong>. Together with his family, he has sustained green plantain fields for <strong>more than 50 years</strong>, producing and selling locally.</p>
-      <p>Our plantains grow <strong>300 to 400 meters above sea level on Ecuador’s Pacific Coast</strong>. We use that clean environment to make snacks free of chemicals and respectful of the land, because we believe that is the key to success.</p>
-      <p>Our organic farming supports the healthy, delicious snacks you find in every Rogai bag.</p>
+      <h2 id="about-h" data-i18n="about.h">Welcome to Bananas Rogai. Where quality is our mission.</h2>
+      <p data-i18n-h="about.p1">Bananas Rogai was founded through the entrepreneurship and vision of <strong>Rodolfo Gaibor</strong>. Together with his family, he has sustained green plantain fields for <strong>more than 50 years</strong>, producing and selling locally.</p>
+      <p data-i18n-h="about.p2">Our plantains grow <strong>300 to 400 meters above sea level on Ecuador’s Pacific Coast</strong>. We use that clean environment to make snacks free of chemicals and respectful of the land, because we believe that is the key to success.</p>
+      <p data-i18n="about.p3">Our organic farming supports the healthy, delicious snacks you find in every Rogai bag.</p>
     </div>
     <div class="about-photos">
       <figure class="ph ph-a reveal">
-        <img src="img/farmer-900.webp" srcset="img/farmer-900.webp 900w, img/farmer-1500.webp 1500w" sizes="(min-width: 960px) 28vw, 70vw" width="900" height="1200" loading="lazy" alt="A Rogai farmer holding two bunches of green plantains in the grove">
+        <img src="img/farmer-900.webp" srcset="img/farmer-900.webp 900w, img/farmer-1500.webp 1500w" sizes="(min-width: 960px) 28vw, 70vw" width="900" height="1200" loading="lazy" data-i18n-a="alt:about.a1" alt="A Rogai farmer holding two bunches of green plantains in the grove">
       </figure>
       <figure class="ph ph-b reveal">
-        <img src="img/plantain-grove-900.webp" srcset="img/plantain-grove-900.webp 900w, img/plantain-grove-1500.webp 1500w" sizes="(min-width: 960px) 22vw, 50vw" width="900" height="1200" loading="lazy" alt="A heap of freshly harvested green plantains in front of the plantain grove">
+        <img src="img/plantain-grove-900.webp" srcset="img/plantain-grove-900.webp 900w, img/plantain-grove-1500.webp 1500w" sizes="(min-width: 960px) 22vw, 50vw" width="900" height="1200" loading="lazy" data-i18n-a="alt:about.a2" alt="A heap of freshly harvested green plantains in front of the plantain grove">
       </figure>
     </div>
   </div>
@@ -134,74 +138,74 @@
 <section class="chips" id="chips" aria-labelledby="chips-h">
   <div class="wrap">
     <div class="chips-head reveal">
-      <h2 id="chips-h">Our chips</h2>
-      <p>Pick a flavor and see what’s in the bag.</p>
+      <h2 id="chips-h" data-i18n="chips.h">Our chips</h2>
+      <p data-i18n="chips.sub">Pick a flavor and see what’s in the bag.</p>
     </div>
 
     <div class="stage" id="stage" data-active="salt">
-      <div class="tabs" role="tablist" aria-label="Rogai products">
-        <button role="tab" id="tab-salt" aria-controls="panel-salt" aria-selected="true" data-key="salt">Sea Salt</button>
-        <button role="tab" id="tab-chili" aria-controls="panel-chili" aria-selected="false" tabindex="-1" data-key="chili">Chili</button>
-        <button role="tab" id="tab-sweet" aria-controls="panel-sweet" aria-selected="false" tabindex="-1" data-key="sweet">Naturally Sweet</button>
-        <button role="tab" id="tab-tostones" aria-controls="panel-tostones" aria-selected="false" tabindex="-1" data-key="tostones">Tostones</button>
-        <button role="tab" id="tab-kilo" aria-controls="panel-kilo" aria-selected="false" tabindex="-1" data-key="kilo">Super 1 kg bag</button>
+      <div class="tabs" role="tablist" data-i18n-a="aria-label:tabs.aria" aria-label="Rogai products">
+        <button role="tab" id="tab-salt" aria-controls="panel-salt" aria-selected="true" data-key="salt" data-i18n="tab.salt">Sea Salt</button>
+        <button role="tab" id="tab-chili" aria-controls="panel-chili" aria-selected="false" tabindex="-1" data-key="chili" data-i18n="tab.chili">Chili</button>
+        <button role="tab" id="tab-sweet" aria-controls="panel-sweet" aria-selected="false" tabindex="-1" data-key="sweet" data-i18n="tab.sweet">Naturally Sweet</button>
+        <button role="tab" id="tab-tostones" aria-controls="panel-tostones" aria-selected="false" tabindex="-1" data-key="tostones" data-i18n="tab.tostones">Tostones</button>
+        <button role="tab" id="tab-kilo" aria-controls="panel-kilo" aria-selected="false" tabindex="-1" data-key="kilo" data-i18n="tab.kilo">Super 1 kg bag</button>
       </div>
 
       <div class="panel" role="tabpanel" id="panel-salt" aria-labelledby="tab-salt">
-        <div class="panel-bag"><img src="img/cut-salt.webp" width="484" height="679" alt="Rogai Plantain Chips, Pacific Sea Salt, 3 oz bag"></div>
+        <div class="panel-bag"><img src="img/cut-salt.webp" width="484" height="679" data-i18n-a="alt:salt.alt" alt="Rogai Plantain Chips, Pacific Sea Salt, 3 oz bag"></div>
         <div class="panel-info">
-          <h3>Plantain Chips<span>Pacific Sea Salt</span></h3>
-          <p>Crisp green plantain slices finished with Pacific sea salt. The simple, honest classic.</p>
-          <dl class="spec"><div><dt>Retail bag</dt><dd>3 oz (85 g)</dd></div><div><dt>Made with</dt><dd>Organic plantains</dd></div></dl>
-          <a class="btn btn-cream" href="#quote">Request a quote</a>
+          <h3><span class="t" data-i18n="name.chips">Plantain Chips</span><span class="s" data-i18n="salt.sub">Pacific Sea Salt</span></h3>
+          <p data-i18n="salt.p">Crisp green plantain slices finished with Pacific sea salt. The simple, honest classic.</p>
+          <dl class="spec"><div><dt data-i18n="spec.retail">Retail bag</dt><dd>3 oz (85 g)</dd></div><div><dt data-i18n="spec.made">Made with</dt><dd data-i18n="spec.org">Organic plantains</dd></div></dl>
+          <a class="btn btn-cream" href="#quote" data-i18n="cta.quote">Request a quote</a>
         </div>
       </div>
 
       <div class="panel" role="tabpanel" id="panel-chili" aria-labelledby="tab-chili" hidden>
-        <div class="panel-bag"><img src="img/cut-chili.webp" width="482" height="676" alt="Rogai Plantain Chips, Chili, 3 oz bag" loading="lazy"></div>
+        <div class="panel-bag"><img src="img/cut-chili.webp" width="482" height="676" data-i18n-a="alt:chili.alt" alt="Rogai Plantain Chips, Chili, 3 oz bag" loading="lazy"></div>
         <div class="panel-info">
-          <h3>Plantain Chips<span>Chili</span></h3>
-          <p>The same crisp plantain slices with a chili kick, for anyone who likes their snack with some heat.</p>
-          <dl class="spec"><div><dt>Retail bag</dt><dd>3 oz (85 g)</dd></div><div><dt>Made with</dt><dd>Organic plantains</dd></div></dl>
-          <a class="btn btn-cream" href="#quote">Request a quote</a>
+          <h3><span class="t" data-i18n="name.chips">Plantain Chips</span><span class="s" data-i18n="chili.sub">Chili</span></h3>
+          <p data-i18n="chili.p">The same crisp plantain slices with a chili kick, for anyone who likes their snack with some heat.</p>
+          <dl class="spec"><div><dt data-i18n="spec.retail">Retail bag</dt><dd>3 oz (85 g)</dd></div><div><dt data-i18n="spec.made">Made with</dt><dd data-i18n="spec.org">Organic plantains</dd></div></dl>
+          <a class="btn btn-cream" href="#quote" data-i18n="cta.quote">Request a quote</a>
         </div>
       </div>
 
       <div class="panel" role="tabpanel" id="panel-sweet" aria-labelledby="tab-sweet" hidden>
-        <div class="panel-bag"><img src="img/cut-sweet.webp" width="483" height="678" alt="Rogai Plantain Chips, Naturally Sweet, 3 oz bag" loading="lazy"></div>
+        <div class="panel-bag"><img src="img/cut-sweet.webp" width="483" height="678" data-i18n-a="alt:sweet.alt" alt="Rogai Plantain Chips, Naturally Sweet, 3 oz bag" loading="lazy"></div>
         <div class="panel-info">
-          <h3>Plantain Chips<span>Naturally Sweet</span></h3>
-          <p>Golden chips with the natural sweetness of the plantain. No added sugar.</p>
-          <dl class="spec"><div><dt>Retail bag</dt><dd>3 oz (85 g)</dd></div><div><dt>Made with</dt><dd>Organic plantains</dd></div></dl>
-          <a class="btn btn-cream" href="#quote">Request a quote</a>
+          <h3><span class="t" data-i18n="name.chips">Plantain Chips</span><span class="s" data-i18n="sweet.sub">Naturally Sweet</span></h3>
+          <p data-i18n="sweet.p">Golden chips with the natural sweetness of the plantain. No added sugar.</p>
+          <dl class="spec"><div><dt data-i18n="spec.retail">Retail bag</dt><dd>3 oz (85 g)</dd></div><div><dt data-i18n="spec.made">Made with</dt><dd data-i18n="spec.org">Organic plantains</dd></div></dl>
+          <a class="btn btn-cream" href="#quote" data-i18n="cta.quote">Request a quote</a>
         </div>
       </div>
 
       <div class="panel" role="tabpanel" id="panel-tostones" aria-labelledby="tab-tostones" hidden>
-        <div class="panel-bag"><img src="img/cut-tostones.webp" width="309" height="416" alt="Rogai Tostones, Garlic, 100 g bag" loading="lazy"></div>
+        <div class="panel-bag"><img src="img/cut-tostones.webp" width="309" height="416" data-i18n-a="alt:tost.alt" alt="Rogai Tostones, Garlic, 100 g bag" loading="lazy"></div>
         <div class="panel-info">
-          <h3>Tostones<span>Garlic</span></h3>
-          <p>Plantain tostones seasoned with garlic, a Latin American favorite in a Rogai bag.</p>
-          <dl class="spec"><div><dt>Retail bag</dt><dd>100 g (3.53 oz)</dd></div><div><dt>Made with</dt><dd>Organic plantains</dd></div></dl>
-          <a class="btn btn-cream" href="#quote">Request a quote</a>
+          <h3><span class="t" data-i18n="tab.tostones">Tostones</span><span class="s" data-i18n="tost.sub">Garlic</span></h3>
+          <p data-i18n="tost.p">Plantain tostones seasoned with garlic, a Latin American favorite in a Rogai bag.</p>
+          <dl class="spec"><div><dt data-i18n="spec.retail">Retail bag</dt><dd>100 g (3.53 oz)</dd></div><div><dt data-i18n="spec.made">Made with</dt><dd data-i18n="spec.org">Organic plantains</dd></div></dl>
+          <a class="btn btn-cream" href="#quote" data-i18n="cta.quote">Request a quote</a>
         </div>
       </div>
 
       <div class="panel panel-kilo" role="tabpanel" id="panel-kilo" aria-labelledby="tab-kilo" hidden>
-        <div class="panel-bag"><img src="img/cut-1kg.webp" width="897" height="723" alt="Two Rogai Chifles 1 kg bags: Sal marina (sea salt) and Dulce (sweet)" loading="lazy"></div>
+        <div class="panel-bag"><img src="img/cut-1kg.webp" width="897" height="723" data-i18n-a="alt:kilo.alt" alt="Two Rogai Chifles 1 kg bags: Sal marina (sea salt) and Dulce (sweet)" loading="lazy"></div>
         <div class="panel-info">
-          <h3>Chifles<span>Our super 1 kg bag</span></h3>
-          <p>Plantain chifles in a generous 1 kg bag, in <strong>Sal marina</strong> (sea salt) and <strong>Dulce</strong> (sweet).</p>
-          <dl class="spec"><div><dt>Bag</dt><dd>1 kg</dd></div><div><dt>Flavors</dt><dd>Sea salt, Sweet</dd></div></dl>
-          <a class="btn btn-cream" href="#quote">Request a quote</a>
+          <h3><span class="t">Chifles</span><span class="s" data-i18n="kilo.sub">Our super 1 kg bag</span></h3>
+          <p data-i18n-h="kilo.p">Plantain chifles in a generous 1 kg bag, in <strong>Sal marina</strong> (sea salt) and <strong>Dulce</strong> (sweet).</p>
+          <dl class="spec"><div><dt data-i18n="spec.bag">Bag</dt><dd>1 kg</dd></div><div><dt data-i18n="spec.flavors">Flavors</dt><dd data-i18n="kilo.fl">Sea salt, Sweet</dd></div></dl>
+          <a class="btn btn-cream" href="#quote" data-i18n="cta.quote">Request a quote</a>
         </div>
       </div>
     </div>
 
     <div class="range reveal">
-      <h3>The full Rogai range</h3>
+      <h3 data-i18n="range.h">The full Rogai range</h3>
       <ul>
-        <li>Sea Salt</li><li>Garlic</li><li>Lime</li><li>Chili</li><li>Sweet</li><li>Carrot</li><li>Yuca</li>
+        <li data-i18n="r.salt">Sea Salt</li><li data-i18n="r.garlic">Garlic</li><li data-i18n="r.lime">Lime</li><li data-i18n="r.chili">Chili</li><li data-i18n="r.sweet">Sweet</li><li data-i18n="r.carrot">Carrot</li><li data-i18n="r.yuca">Yuca</li>
       </ul>
     </div>
   </div>
@@ -210,23 +214,23 @@
 <!-- PROCESS -->
 <section class="process" aria-labelledby="process-h">
   <div class="wrap">
-    <h2 id="process-h" class="reveal">From the grove to the box.</h2>
+    <h2 id="process-h" class="reveal" data-i18n="proc.h">From the grove to the box.</h2>
     <div class="process-grid">
       <figure class="reveal">
-        <img src="img/plantain-pile-900.webp" srcset="img/plantain-pile-900.webp 900w, img/plantain-pile-1500.webp 1500w" sizes="(min-width: 960px) 24vw, 46vw" width="900" height="1200" loading="lazy" alt="A large pile of green plantains after harvest">
-        <figcaption>Green plantains, straight from our fields</figcaption>
+        <img src="img/plantain-pile-900.webp" srcset="img/plantain-pile-900.webp 900w, img/plantain-pile-1500.webp 1500w" sizes="(min-width: 960px) 24vw, 46vw" width="900" height="1200" loading="lazy" data-i18n-a="alt:proc.a1" alt="A large pile of green plantains after harvest">
+        <figcaption data-i18n="proc.c1">Green plantains, straight from our fields</figcaption>
       </figure>
       <figure class="reveal">
-        <img src="img/peeled-900.webp" srcset="img/peeled-900.webp 900w, img/peeled-1500.webp 1500w" sizes="(min-width: 960px) 24vw, 46vw" width="900" height="1200" loading="lazy" alt="Peeled plantains in a blue crate">
-        <figcaption>Peeled and ready</figcaption>
+        <img src="img/peeled-900.webp" srcset="img/peeled-900.webp 900w, img/peeled-1500.webp 1500w" sizes="(min-width: 960px) 24vw, 46vw" width="900" height="1200" loading="lazy" data-i18n-a="alt:proc.a2" alt="Peeled plantains in a blue crate">
+        <figcaption data-i18n="proc.c2">Peeled and ready</figcaption>
       </figure>
       <figure class="reveal">
-        <img src="img/chip-line-workers-900.webp" srcset="img/chip-line-workers-900.webp 900w, img/chip-line-workers-1500.webp 1500w" sizes="(min-width: 960px) 24vw, 46vw" width="900" height="1200" loading="lazy" alt="Two team members working along the plantain chip production line">
-        <figcaption>On the production line</figcaption>
+        <img src="img/chip-line-workers-900.webp" srcset="img/chip-line-workers-900.webp 900w, img/chip-line-workers-1500.webp 1500w" sizes="(min-width: 960px) 24vw, 46vw" width="900" height="1200" loading="lazy" data-i18n-a="alt:proc.a3" alt="Two team members working along the plantain chip production line">
+        <figcaption data-i18n="proc.c3">On the production line</figcaption>
       </figure>
       <figure class="reveal">
-        <img src="img/bulk-boxes-900.webp" srcset="img/bulk-boxes-900.webp 900w, img/bulk-boxes-1500.webp 1500w" sizes="(min-width: 960px) 24vw, 46vw" width="900" height="1200" loading="lazy" alt="Bulk cartons lined with bags and filled with plantain chips">
-        <figcaption>Packed in bulk, ready to ship</figcaption>
+        <img src="img/bulk-boxes-900.webp" srcset="img/bulk-boxes-900.webp 900w, img/bulk-boxes-1500.webp 1500w" sizes="(min-width: 960px) 24vw, 46vw" width="900" height="1200" loading="lazy" data-i18n-a="alt:proc.a4" alt="Bulk cartons lined with bags and filled with plantain chips">
+        <figcaption data-i18n="proc.c4">Packed in bulk, ready to ship</figcaption>
       </figure>
     </div>
   </div>
@@ -236,17 +240,17 @@
 <section class="commitment" id="commitment" aria-labelledby="commit-h">
   <div class="wrap commit-grid">
     <div class="commit-photo reveal">
-      <img src="img/chip-line-b-900.webp" srcset="img/chip-line-b-900.webp 900w, img/chip-line-b-1500.webp 1500w" sizes="(min-width: 960px) 36vw, 90vw" width="900" height="1200" loading="lazy" alt="Women on the Rogai team sorting plantain chips along the line">
+      <img src="img/chip-line-b-900.webp" srcset="img/chip-line-b-900.webp 900w, img/chip-line-b-1500.webp 1500w" sizes="(min-width: 960px) 36vw, 90vw" width="900" height="1200" loading="lazy" data-i18n-a="alt:commit.alt" alt="Women on the Rogai team sorting plantain chips along the line">
     </div>
     <div class="commit-copy">
-      <h2 id="commit-h" class="reveal">Our commitment.</h2>
-      <p class="reveal">Rogai is a family-owned company. Our commitment to sustainability means supporting the women who work with us in Manabí and their children, who come from underprivileged rural families nearby.</p>
-      <ol class="pillars reveal" aria-label="Our three pillars of sustainable development">
-        <li>Social responsibility</li>
-        <li>Economic development</li>
-        <li>Protection of the environment</li>
+      <h2 id="commit-h" class="reveal" data-i18n="commit.h">Our commitment.</h2>
+      <p class="reveal" data-i18n="commit.p">Rogai is a family-owned company. Our commitment to sustainability means supporting the women who work with us in Manabí and their children, who come from underprivileged rural families nearby.</p>
+      <ol class="pillars reveal" data-i18n-a="aria-label:pillars.aria" aria-label="Our three pillars of sustainable development">
+        <li data-i18n="pillar.1">Social responsibility</li>
+        <li data-i18n="pillar.2">Economic development</li>
+        <li data-i18n="pillar.3">Protection of the environment</li>
       </ol>
-      <blockquote class="reveal">Our mission is to provide you the best snack full of flavour, health, and variety.</blockquote>
+      <blockquote class="reveal" data-i18n="commit.q">Our mission is to provide you the best snack full of flavour, health, and variety.</blockquote>
     </div>
   </div>
 </section>
@@ -255,10 +259,10 @@
 <section class="quote" id="quote" aria-labelledby="quote-h">
   <div class="wrap quote-grid">
     <div>
-      <h2 id="quote-h">Your brand, our chips.</h2>
-      <p>We also offer custom packaging. Tell us what you have in mind and request your initial quote.</p>
+      <h2 id="quote-h" data-i18n="quote.h">Your brand, our chips.</h2>
+      <p data-i18n="quote.p">We also offer custom packaging. Tell us what you have in mind and request your initial quote.</p>
     </div>
-    <a class="btn btn-burgundy btn-lg" href="#contact">Request an initial quote</a>
+    <a class="btn btn-burgundy btn-lg" href="#contact" data-i18n="quote.btn">Request an initial quote</a>
   </div>
 </section>
 
@@ -266,48 +270,48 @@
 <section class="contact" id="contact" aria-labelledby="contact-h">
   <div class="wrap contact-grid">
     <div class="contact-info">
-      <h2 id="contact-h">Reach out today. Let’s start working together!</h2>
+      <h2 id="contact-h" data-i18n="contact.h">Reach out today. Let’s start working together!</h2>
       <ul class="contact-list">
         <li>
           <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.500 1.500a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg>
-          <div><span class="lbl">Phone</span>
+          <div><span class="lbl" data-i18n="contact.phone">Phone</span>
             <a href="tel:+593995090656">+593 9 509-0656</a><br>
             <a href="tel:+593984500751">+593 8 450-0751</a></div>
         </li>
         <li>
           <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg>
-          <div><span class="lbl">Email</span>
+          <div><span class="lbl" data-i18n="contact.email">Email</span>
             <a href="mailto:sales@rogaisnacks.com">sales@rogaisnacks.com</a><br>
             <a href="mailto:info@rogaisnacks.com">info@rogaisnacks.com</a></div>
         </li>
         <li>
           <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.200-7-11a7 7 0 0 1 14 0c0 4.800-7 11-7 11Z"/><circle cx="12" cy="10" r="2.500"/></svg>
-          <div><span class="lbl">Location</span>Quito, Ecuador</div>
+          <div><span class="lbl" data-i18n="contact.loc">Location</span>Quito, Ecuador</div>
         </li>
       </ul>
     </div>
 
     <form class="form" id="form" novalidate>
       <div class="field">
-        <label for="f-name">Name</label>
+        <label for="f-name" data-i18n="form.name">Name</label>
         <input id="f-name" name="name" type="text" autocomplete="name" required>
         <span class="err" aria-live="polite"></span>
       </div>
       <div class="field">
-        <label for="f-company">Company</label>
+        <label for="f-company" data-i18n="form.company">Company</label>
         <input id="f-company" name="company" type="text" autocomplete="organization">
       </div>
       <div class="field">
-        <label for="f-email">Email</label>
+        <label for="f-email" data-i18n="form.email">Email</label>
         <input id="f-email" name="email" type="email" autocomplete="email" required>
         <span class="err" aria-live="polite"></span>
       </div>
       <div class="field">
-        <label for="f-msg">How can we help?</label>
-        <textarea id="f-msg" name="message" rows="5" required placeholder="Products, volumes, custom packaging…"></textarea>
+        <label for="f-msg" data-i18n="form.msg">How can we help?</label>
+        <textarea id="f-msg" name="message" rows="5" required data-i18n-a="placeholder:form.ph" placeholder="Products, volumes, custom packaging…"></textarea>
         <span class="err" aria-live="polite"></span>
       </div>
-      <button class="btn btn-solid btn-lg" type="submit">Submit</button>
+      <button class="btn btn-solid btn-lg" type="submit" data-i18n="form.send">Submit</button>
       <p class="form-note" id="form-note" role="status"></p>
     </form>
   </div>
@@ -318,18 +322,19 @@
   <div class="wrap foot">
     <div class="foot-brand">
       <img src="img/mascot-240.webp" width="72" height="72" alt="" loading="lazy">
-      <p>Rogai<br><span>A tropical and natural snack</span></p>
+      <p>Rogai<br><span data-i18n="foot.tag">A tropical and natural snack</span></p>
     </div>
-    <nav aria-label="Footer">
-      <a href="#about">About Us</a>
-      <a href="#chips">Our Chips</a>
-      <a href="#commitment">Our Commitment</a>
-      <a href="#contact">Contact Us</a>
+    <nav data-i18n-a="aria-label:foot.aria" aria-label="Footer">
+      <a href="#about" data-i18n="nav.about">About Us</a>
+      <a href="#chips" data-i18n="nav.chips">Our Chips</a>
+      <a href="#commitment" data-i18n="nav.commit">Our Commitment</a>
+      <a href="#contact" data-i18n="nav.contact">Contact Us</a>
     </nav>
-    <p class="legal">Bananas Rogai. All rights reserved.<br>USDA Organic · Kosher · SGS HACCP</p>
+    <p class="legal"><span data-i18n="foot.rights">Bananas Rogai. All rights reserved.</span><br>USDA Organic · Kosher · SGS HACCP</p>
   </div>
 </footer>
 
+<script src="js/i18n.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
