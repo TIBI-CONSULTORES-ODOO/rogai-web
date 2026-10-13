@@ -2,6 +2,15 @@
 (() => {
   const ES = {
     'skip': 'Saltar al contenido',
+    'seal.usda.alt': 'Sello USDA Organic',
+    'seals.h': 'En cada bolsa Rogai',
+    'seal.gmo': 'No transgénico',
+    'seal.gluten': 'Sin gluten',
+    'seal.trans': '0 g de grasas trans',
+    'seal.chol': '0% colesterol',
+    'social.h': 'Síguenos',
+    'social.fb': 'Rogai Snacks en Facebook',
+    'social.ig': 'Rogai Snacks en Instagram (@rogai_snacks)',
     'brand.aria': 'Rogai, una botana tropical y natural. Inicio',
     'brand.alt': 'Rogai, una botana tropical y natural',
     'nav.aria': 'Principal',
